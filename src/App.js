@@ -5,13 +5,13 @@ function App() {
     {
   title:'Toilet Paper',
   amount:300,
-  date:new Date(2022,2,28),
+  date:new Date(2024,0,28),
   location:'USA'
   },
   {
     title:'New TV',
     amount:788,
-    date:new Date(2022,2,28),
+    date:new Date(2023,4,28),
     location:'Canada'
     },
   {
@@ -23,7 +23,7 @@ function App() {
     {
       title:'New desk',
       amount:159,
-      date:new Date(2022,2,28),
+      date:new Date(2022,5,28),
       location:'USA'
       } 
 ]
