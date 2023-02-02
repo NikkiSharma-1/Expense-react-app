@@ -1,51 +1,41 @@
+import React from 'react';
 
-import ExpenseItem from "./components/ExpenseItem";
-function App() {
-  const expense=[
+import Expenses from './components/Expenses/Expenses';
+
+const App = () => {
+  const expenses = [
     {
-  title:'Toilet Paper',
-  amount:300,
-  date:new Date(2024,0,28),
-  location:'USA'
-  },
-  {
-    title:'New TV',
-    amount:788,
-    date:new Date(2023,4,28),
-    location:'Canada'
+      id: 'e1',
+      title: 'Toilet Paper',
+      amount: 94.12,
+      date: new Date(2020, 7, 14),
     },
-  {
-    title:'Car Insurance',
-    amount:269,
-    date:new Date(2022,2,28),
-    location:'Houston'
+    { id: 'e2', title: 'New TV', amount: 799.49, date: new Date(2021, 2, 12) },
+    {
+      id: 'e3',
+      title: 'Car Insurance',
+      amount: 294.67,
+      date: new Date(2021, 2, 28),
     },
     {
-      title:'New desk',
-      amount:159,
-      date:new Date(2022,5,28),
-      location:'USA'
-      } 
-]
+      id: 'e4',
+      title: 'New Desk (Wooden)',
+      amount: 450,
+      date: new Date(2021, 5, 12),
+    },
+  ];
+
+  // return React.createElement(
+  //   'div',
+  //   {},
+  //   React.createElement('h2', {}, "Let's get started!"),
+  //   React.createElement(Expenses, { items: expenses })
+  // );
+
   return (
     <div>
-      <h2>Let's started...</h2>
-      <ExpenseItem title={expense[0].title}
-      amount={expense[0].amount}
-    date={expense[0].date}
-    location={expense[0].location}></ExpenseItem>
-<ExpenseItem title={expense[1].title}
-      amount={expense[1].amount}
-    date={expense[1].date}
-    location={expense[1].location}></ExpenseItem>
-    <ExpenseItem title={expense[2].title}
-      amount={expense[2].amount}
-    date={expense[2].date}
-    location={expense[2].location}></ExpenseItem>
-    <ExpenseItem title={expense[3].title}
-      amount={expense[3].amount}
-    date={expense[3].date}
-    location={expense[3].location}></ExpenseItem>
+      <h2>Let's get started!</h2>
+      <Expenses items={expenses} />
     </div>
   );
 }
